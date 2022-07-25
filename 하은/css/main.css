@@ -1,0 +1,79 @@
+/* 네비게이션 css */
+/* #fp-nav { position: fixed; right: 20px; top: 50%; transform: translateY(-50%); z-index: 10; }
+#fp-nav > * { cursor: pointer; }
+#fp-nav ul li a { display: inline-block; }
+#fp-nav ul li a.active + .fp-tooltip { color: #fff; } */
+
+
+body { height: auto !important; }
+
+/* section1 */
+header { margin-bottom: 100px; }
+header span { display: inline-block; font-size: 20px; font-weight: 700; font-family: 'Noto_Sans_KR', sans-serif; }
+header .left_box { padding-left: 20px; }
+
+#sh-bg { position: fixed; width: 100%; height: 100%; top: 0; }
+#bg1 { width: 100%; position: relative; height: 100%; overflow: hidden; z-index: 10; }
+#person .about_title { margin-bottom: 30px; }
+#person .about_title h3 { font-size: 55px; }
+
+#person .leftBox { width: 41%; }
+#person .introBox .imgBox { margin-bottom: 25px; }
+#person .introBox .descBox { margin-bottom: 20px; }
+#person .introBox .descBox p { font-size: 40px; font-weight: 700; line-height: 1.4; font-family: 'Noto_Sans_KR', sans-serif; }
+#person .introBox .descBox p em { font-weight: 700; color: #b69373; font-family: 'Noto_Sans_KR', sans-serif; }
+#person .introBox .downBox a { padding: 20px 0; border: 1px solid #000000; border-radius: 10px; max-width: 270px; }
+#person .introBox .downBox a span { font-size: 20px; font-weight: 300; font-family: 'Noto_Sans_KR', sans-serif; margin-right: 30px; }
+
+#person .rightBox { width: 59%; }
+#person .rightBox .box p { font-size: 20px; font-family: 'Noto_Sans_KR', sans-serif; line-height: 1.5;}
+#person .rightBox .box p:not(:last-child) { margin-bottom: 35px; }
+#person .rightBox .box > div:not(:last-child) { margin-bottom: 70px; }
+#person .rightBox .box > div h6 { font-size: 25px; font-weight: 700; color: #b69373;  font-family: 'Noto_Sans_KR', sans-serif; margin-bottom: 20px; }
+#person .rightBox .box > div dl { display: flex; align-items: center; }
+#person .rightBox .box > div dl:not(:last-child) { margin-bottom: 20px; } 
+#person .rightBox .box > div dl dt { font-size: 20px; font-weight: 700; width: 200px; }
+#person .rightBox .box > div dl dd { font-size: 20px; width: calc(100% - 200px); }
+
+
+#section1 { position: relative; z-index: -1; }
+#s-section1 { height: 550vh; position: relative; width: 100%; }
+
+#section2 { position: relative; z-index: 10; box-shadow: 0 0 40px rgba(0, 0, 0, 0.15); }
+#section2 .sec2_wrap { background-color: #fff; padding-top: 100px; }
+#section2 .titBox { text-align: center; margin-bottom: 70px; }
+#section2 .titBox h3 { font-size: 55px; }
+#section2 .contBox ul li { width: 32%; margin-bottom: 40px; }
+#section2 .contBox ul li:not(:nth-child(3n)) { margin-right: 2%; }
+#section2 .contBox ul li .imgBox { border-radius: 10px; overflow: hidden; position: relative; margin-bottom: 15px; }
+#section2 .contBox ul li .imgBox::after { content: ''; display: block; opacity: 1; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); position: absolute; top: 0; left: 0; transition: all 0.5s; }
+#section2 .contBox ul li .imgBox img { transition: all 0.5s; }
+#section2 .contBox ul li .subjectBox { padding-left: 20px; }
+#section2 .contBox ul li .subjectBox span { display: inline-block; font-size: 20px; font-weight: 500; }
+
+#section2 .contBox .moreViewBox { margin-bottom: 180px; }
+#section2 .contBox .moreViewBox span { margin-right: 20px; }
+
+#section2 .contBox .contactBox { text-align: center; padding-bottom: 200px; }
+#section2 .contBox .contactBox h3 { font-size: 60px; margin-bottom: 50px; }
+#section2 .contBox .contactBox p { font-size: 60px; font-weight: 300; }
+
+/* hover */
+#section2 .contBox ul li:hover .imgBox::after { opacity: 0; }
+#section2 .contBox ul li:hover .imgBox img { transform: scale(1.05); }
+
+
+
+/* 팝업 */
+#popUp { position: fixed; opacity: 0; visibility: hidden; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100vh; background-color: rgba(0, 0, 0, 0.8); z-index: 1000; transition: all 0.3s; }
+#popUp.show { opacity: 1; visibility: visible; }
+#popUp.show .popUpContents { opacity: 1; transform: translateY(0); }
+#popUp .popUpBox { position: relative; width: 100%; height: 100%; max-width: 1450px; margin: 0 auto; padding-top: 70px; }
+#popUp .popUpBox .closeBox { text-align: right; margin-bottom: 50px; }
+#popUp .popUpBox .closeBox img { transition: all 0.6s; }
+#popUp .popUpContents { background-color: #fff; border-radius: 20px; overflow: hidden; height: 650px; overflow: auto; text-align: center; opacity: 0; transform: translateY(70px); transition: all 0.6s cubic-bezier(0.075, 0.82, 0.165, 1); }
+#popUp .popUpContents::-webkit-scrollbar { width: 6px; }
+#popUp .popUpContents::-webkit-scrollbar-thumb { background-color: #b69373; border-radius: 10px; height: 50%; }
+#popUp .popUpContents::-webkit-scrollbar-track { background-color: rgba(0, 0, 0, 0); border-radius: 10px; }
+
+#popUp .popUpBox .closeBox a:hover img { transform: rotate(180deg); }
